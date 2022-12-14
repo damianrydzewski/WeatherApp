@@ -12,7 +12,6 @@ enum WebserviceError: Error {
     case badRequest
 }
 
-@MainActor
 final class WeatherService {
 // Completion handler
     
