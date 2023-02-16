@@ -13,6 +13,9 @@ enum WebserviceError: Error {
 }
 
 final class WeatherService {
+//     @Published var models: [Weather] = []
+//     var cancellables = Set<AnyCancellable>()
+    
 // Completion handler
     
 //    func getWeather(city: String, completion: @escaping (Weather?) -> ()) {
@@ -39,6 +42,30 @@ final class WeatherService {
 //    }
 //
     
+// Combine
+// func getWeather(city: String) {
+//     guard let url = URL(string: "https://api.openweathermap.org/data/2.5/weather?q=\(city)&appid={appkey}&units=metric") else {return WebserviceError.badURL}
+    
+//     URLSession.shared.dataTaskPublisher(for: url)
+//         .subscribe(on: DispatchQueue.global(qos: .background))
+//         .receive(on: DispatchQueue.main)
+//         .tryMap { (data, response) -> Data in
+//             guard 
+//                  let response = response as? HTTPURLResponse,
+//                  response.statusCode >= 200 && response.statusCode < 300
+//             else {
+//                 throw URLError(.badServerResponse)
+//             }
+//             return data
+//         }
+//         .decode(type: WeatherResponse.self, decode: JSONDecoder())
+//         .sink {
+        
+//         } receiveValue: { [weak self] (returnWeather) in 
+//             self?.models = returnedWeather
+//         }
+//         .store(in: &cancellables)
+// }
     
 // Swift Concurrency
 //
